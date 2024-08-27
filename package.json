@@ -3,9 +3,15 @@
   "version": "0.0.1",
   "type": "module",
   "description": "Simple match that follows node-tap specs",
-  "main": "matchare.js",
+  "main": "matchare.cjs",
+  "exports": {
+    ".": {
+      "import": "./matchare.js",
+      "require": "./matchare.cjs"
+    }
+  },
   "bin": {
-    "matchare": "matchare.js"
+    "matchare": "./matchare.js"
   },
   "repository": {
     "type": "git",
