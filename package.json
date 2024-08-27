@@ -1,6 +1,6 @@
 {
   "name": "matchare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "Simple match that follows node-tap specs",
   "main": "./dist/matchare.cjs",
