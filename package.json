@@ -3,18 +3,27 @@
   "version": "0.0.1",
   "type": "module",
   "description": "Simple match that follows node-tap specs",
-  "main": "matchare.js",
-  "bin": {
-    "matchare": "matchare.js"
+  "main": "./dist/matchare.cjs",
+  "module": "./dist/matchare.js",
+  "exports": {
+    ".": {
+      "import": "./dist/matchare.js",
+      "require": "./dist/matchare.cjs"
+    }
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mateonunez/matchare"
   },
   "scripts": {
+    "clean": "rimraf dist",
     "lint": "standard --fix | snazzy",
     "unit": "c8 node --test ./test/**.test.js",
-    "test": "npm run lint && npm run unit"
+    "test": "npm run lint && npm run unit",
+    "build": "npm run clean && tsup ./matchare.js --format cjs,esm"
   },
   "keywords": [
     "match",
@@ -24,11 +33,13 @@
   "author": "Mateo Nunez <mateonunez95@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@matteo.collina/tspl": "^0.1.0",
-    "@types/node": "^22.2.0",
-    "c8": "^10.0.0",
+    "@matteo.collina/tspl": "^0.1.1",
+    "@types/node": "^22.5.0",
+    "c8": "^10.1.2",
+    "rimraf": "^6.0.1",
     "snazzy": "^9.0.0",
     "standard": "^17.1.0",
-    "typescript": "^5.3.2"
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
   }
 }

@@ -11,7 +11,7 @@ npm i matchare --save-dev
 ## Usage
 
 ```javascript
-import matchare from 'matchare';
+import { matchare } from 'matchare';
 
 const actual = { a: 1, b: 2 };
 const expected = { a: 1 };
@@ -22,7 +22,7 @@ matchare(actual, expected); // this match will return true
 ---
 
 ```javascript
-import matchare from 'matchare';
+import { matchare } from 'matchare';
 
 const actual = { a: 1, b: 2 };
 const expected = { a: 2 };
