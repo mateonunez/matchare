@@ -1,6 +1,6 @@
-import { describe, test } from 'node:test'
-import { tspl } from '@matteo.collina/tspl'
-import { matchare } from '../matchare.js'
+const { describe, test } = require('node:test')
+const { tspl } = require('@matteo.collina/tspl')
+const { matchare } = require('../matchare.js')
 
 test('simple match', async (t) => {
   const { ok } = tspl(t, { plan: 1 })
