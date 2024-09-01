@@ -1,6 +1,6 @@
 {
   "name": "matchare",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "type": "module",
   "description": "A flexible JavaScript library for comparing objects, arrays, strings, and more, supporting patterns like regex and deep comparisons.",
   "main": "./dist/matchare.cjs",
