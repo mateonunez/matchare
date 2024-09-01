@@ -1,4 +1,6 @@
-export function matchare (actual, expected) {
+'use strict'
+
+function matchare (actual, expected) {
   if (typeof actual === 'string' && typeof expected === 'string') {
     const patterns = expected.trim().split(/\r?\n/).map(function trimLine (line) {
       return line.trim()
@@ -32,3 +34,5 @@ export function matchare (actual, expected) {
   }
   return true
 }
+
+module.exports = { matchare }
